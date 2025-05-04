@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net8.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <PackageId>ParallelStacks.Net</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Michael Yarichuk</Authors>
+        <Description>A ClrMD-based async/thread diagnostics library</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/myarichuk/ParallelStacks.Net</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/myarichuk/ParallelStacks.Net</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+
+        <!-- Embedded debug symbols -->
+        <DebugType>embedded</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+        <IncludeSymbols>false</IncludeSymbols>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+        <!-- XML doc generation -->
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+
+        <!-- NuGet readme 
+        <PackageReadmeFile>..\README.md</PackageReadmeFile>
+        -->
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Diagnostics.Runtime" Version="3.*"/>
+        <PackageReference Include="Microsoft.Diagnostics.Runtime.Utilities" Version="3.*"/>
+    </ItemGroup>
+</Project>
